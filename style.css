@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(ellipse at center, #0a0f1c, #0a0f1c 80%, #060a13 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  gap: 2vw;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  border-radius: 18px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.header-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 10px 0 20px;
+  font-weight: 500;
+}
+
+.upload-btn {
+  padding: 16px 24px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #1f2b3d, #0e121c);
+  border: 1px solid #1c2431;
+  color: #d1dfff;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.upload-btn span {
+  font-size: 20px;
+  line-height: 0;
+}
+
+#processingText {
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+canvas {
+  image-rendering: pixelated;
+  max-width: 100%;
+  border-radius: 12px;
+  background: #0c1628;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #aaa;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.input-group input {
+  background: #121e2e;
+  border: 1px solid #263143;
+  color: white;
+  border-radius: 8px;
+  padding: 4px 8px;
+  width: 80px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: linear-gradient(135deg, #2c4b7d, #1d2c48);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.download-preview {
+  width: 128px;
+  height: 128px;
+  background: #111c2e;
+  border-radius: 12px;
+  image-rendering: pixelated;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 20px;
+}
+
+.info-icon {
+  font-style: italic;
+  font-size: 12px;
+  background: #2f394f;
+  color: #dbe4ff;
+  padding: 2px 6px;
+  border-radius: 8px;
+  cursor: help;
+}
+
+.hidden {
+  display: none !important;
+}

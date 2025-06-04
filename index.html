@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cursor Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-container">
+    <!-- Upload/Preview Area -->
+    <section id="upload-area" class="card">
+      <div class="header-row">
+        <span>screen</span>
+        <span class="info-icon" title="This is the image upload section.">i</span>
+      </div>
+      <h1>Cursor Builder</h1>
+      <label class="upload-btn" for="fileInput">
+        <span>+</span> Choose a PNG file
+      </label>
+      <input type="file" id="fileInput" accept="image/png" hidden>
+      <p id="processingText">Processing your image...</p>
+    </section>
+
+    <!-- Editor Area -->
+    <section id="editor-area" class="card hidden">
+      <div class="header-row">
+        <span>screen</span>
+        <span class="info-icon" title="This is the editor view for your cursor.">i</span>
+      </div>
+      <canvas id="editorCanvas"></canvas>
+      <div class="controls">
+        <div class="input-group">
+          <label>Scale <span class="info-icon" title="Adjusts overall image size.">i</span></label>
+          <input type="number" id="scalePercent" value="100" min="10" max="500">%
+        </div>
+        <div class="input-group">
+          <label>Hotspot X <span class="info-icon" title="The horizontal click point.">i</span></label>
+          <input type="number" id="hotspotX" value="0">
+        </div>
+        <div class="input-group">
+          <label>Hotspot Y <span class="info-icon" title="The vertical click point.">i</span></label>
+          <input type="number" id="hotspotY" value="0">
+        </div>
+      </div>
+      <button id="generateBtn">Generate Cursor</button>
+    </section>
+
+    <!-- Download Area -->
+    <section id="download-area" class="card hidden">
+      <div class="header-row">
+        <span>screen</span>
+        <span class="info-icon" title="This is your final downloadable cursor.">i</span>
+      </div>
+      <div class="download-preview" id="downloadPreview"></div>
+      <button id="downloadBtn">Download Cursor</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
